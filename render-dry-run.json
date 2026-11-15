@@ -1,0 +1,30 @@
+[
+  {
+    "case": "full",
+    "planned_chunks": 20,
+    "actual_cached_chunks": 20,
+    "planning_seconds": 3.399855399999069,
+    "render_pixels_unchanged": true
+  },
+  {
+    "case": "crop-rotate",
+    "planned_chunks": 8,
+    "actual_cached_chunks": 8,
+    "planning_seconds": 3.6173253000015393,
+    "render_pixels_unchanged": true
+  },
+  {
+    "case": "accumulated",
+    "planned_chunks": 20,
+    "actual_cached_chunks": 20,
+    "planning_seconds": 3.2754122000005736,
+    "render_pixels_unchanged": true
+  },
+  {
+    "case": "tiff-part0",
+    "planned_chunks": 10,
+    "actual_cached_chunks": 10,
+    "planning_seconds": 3.5447363999992376,
+    "render_pixels_unchanged": true
+  }
+]

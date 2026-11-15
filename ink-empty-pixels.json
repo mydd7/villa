@@ -1,0 +1,25 @@
+{
+  "sample": "PHerc0800",
+  "segment": "20251029010146",
+  "shape": [
+    980,
+    980
+  ],
+  "valid_pixels_unchanged": 497600,
+  "empty_pixels": 462800,
+  "nonzero_empty_pixels_before": 310848,
+  "nonzero_empty_pixels_after": 0,
+  "above_half_empty_pixels_before": 8914,
+  "before_modes_identical": true,
+  "after_modes_identical": true,
+  "output_sha256": {
+    "baseline-native": "a10caf386065863312ef376e7c47f6c1d3b256d7a38ad008220e418c9375f0f8",
+    "spawned": "a10caf386065863312ef376e7c47f6c1d3b256d7a38ad008220e418c9375f0f8",
+    "disk-accumulation": "a10caf386065863312ef376e7c47f6c1d3b256d7a38ad008220e418c9375f0f8",
+    "empty-pixels-fixed": "6d840b987ce32ca6a02642e30818bbc2ce8fa1416c1cc68260fb192b5e4d702b",
+    "fixed-spawned-disk": "6d840b987ce32ca6a02642e30818bbc2ce8fa1416c1cc68260fb192b5e4d702b"
+  },
+  "native_build": "Windows GCC/UCRT64, Python 3.14; local reader uses the bindings.cpp changes from #2533 and the scratch lifetime fix from #2566.",
+  "validation": "8 new cases fail before the fix and pass after; 88 flat/ROI tests pass, 1 MPS test skipped.",
+  "limits": "CPU only; no ink-accuracy or letter-discovery claim. Zero across all selected raw layers follows the existing empty-patch convention."
+}

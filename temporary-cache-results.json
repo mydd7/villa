@@ -1,0 +1,20 @@
+{
+  "before": {
+    "sample": "PHerc0800",
+    "pixels_identical": true,
+    "temporary_cache_removed": false,
+    "remaining_files": [
+      ".vc_reader_cache.sqlite3",
+      ".vc_reader_cache.sqlite3-shm",
+      ".vc_reader_cache.sqlite3-wal",
+      "1916703938082262640.lock",
+      "x.tif"
+    ]
+  },
+  "after": {
+    "sample": "PHerc0800",
+    "pixels_identical": true,
+    "temporary_cache_removed": true,
+    "remaining_files": []
+  }
+}

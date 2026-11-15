@@ -1,0 +1,26 @@
+{
+  "python_zarr_installed": false,
+  "budget_bytes": 3000000,
+  "reads": [
+    {
+      "level": 1,
+      "payload_bytes": 2097152,
+      "payload_files": 1,
+      "read_shape": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "level": 2,
+      "payload_bytes": 2097152,
+      "payload_files": 1,
+      "read_shape": [
+        1,
+        1,
+        1
+      ]
+    }
+  ]
+}

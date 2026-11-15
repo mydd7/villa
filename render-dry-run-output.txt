@@ -1,0 +1,4 @@
+[dry-run] Referenced source chunks: 20
+[dry-run] Full decoded chunk bytes: 41943040 (0.039 GiB)
+[dry-run] No CT chunks read or render files written. Metadata may be cached.
+[dry-run] Compressed download size and existing cached chunks are not estimated.

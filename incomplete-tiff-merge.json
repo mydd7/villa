@@ -1,0 +1,15 @@
+{
+  "before": {
+    "missing_part_exit": 0,
+    "part_files_preserved": false,
+    "complete_merge_matches_single_render": true,
+    "slice_count": 8,
+    "pixels_lost_by_incomplete_merge": 446560
+  },
+  "after": {
+    "missing_part_exit": 1,
+    "part_files_preserved": true,
+    "complete_merge_matches_single_render": true,
+    "slice_count": 8
+  }
+}
