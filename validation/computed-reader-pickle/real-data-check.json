@@ -1,0 +1,20 @@
+{
+  "data": "PHerc0800 rendered CT crop",
+  "shape": [
+    3,
+    32,
+    32
+  ],
+  "values_compared_per_path": 3072,
+  "ct_sha256": "3d3978530ba2569cf61e584fd6105b74b2ada3338ae66a0898374549392b9a81",
+  "dtype": "float32",
+  "normalization": "float32 CT values divided by float32(255)",
+  "expected_sha256": "12c9d197e6b2319c2ca79ee7efbeaafd1d9ba858f87ea0f148bc25cb8c91f5f7",
+  "direct_sha256": "12c9d197e6b2319c2ca79ee7efbeaafd1d9ba858f87ea0f148bc25cb8c91f5f7",
+  "pickle_roundtrip_sha256": "12c9d197e6b2319c2ca79ee7efbeaafd1d9ba858f87ea0f148bc25cb8c91f5f7",
+  "spawn_dataloader_sha256": "12c9d197e6b2319c2ca79ee7efbeaafd1d9ba858f87ea0f148bc25cb8c91f5f7",
+  "batch_count": 1,
+  "workers": 1,
+  "multiprocessing_context": "spawn",
+  "all_pixels_identical": true
+}

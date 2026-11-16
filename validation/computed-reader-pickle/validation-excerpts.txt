@@ -1,0 +1,16 @@
+Computed CT in spawned Python workers
+PHerc0800 rendered crop: 3 x 32 x 32, normalized float32
+Saved pytest excerpts; this is not a live terminal.
+
+BEFORE (same eight regression tests)
+_pickle.PicklingError: Can't pickle local object <function
+ZarrReader.computed.<locals>.chunk_bytes at 0x0000012222127E20>
+7 failed, 1 passed, 1 warning in 1.91s
+
+AFTER (same eight regression tests)
+8 passed in 4.99s
+
+Additional run with existing writer controls:
+test_computed_ct_spawn_dataloader PASSED [ 70%]
+test_computed_array_reads_like_a_stored_one PASSED [100%]
+10 passed, 39 deselected in 5.35s

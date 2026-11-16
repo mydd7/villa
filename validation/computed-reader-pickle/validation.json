@@ -1,0 +1,97 @@
+{
+  "baseline_commit": "2d3fb38d33a18b257230c0bd23986436c3d4722e",
+  "source_branch": "fix/computed-reader-pickle",
+  "source_commit": "83382d976d715b65349e3a1337ff8e0d4821536f",
+  "scope": "Python serialization adapter only; native computed-array implementation and numerical conversion are unchanged",
+  "data": "PHerc0800 rendered CT crop: vc_reader/tests/data/PHerc0800/source.json",
+  "regression_tests": {
+    "before_failed": 7,
+    "before_passed": 1,
+    "after_passed": 8,
+    "checks": [
+      "pickle roundtrips with/without disk and memory caches",
+      "None chunks retain fill value",
+      "multiprocessing spawn",
+      "PyTorch DataLoader spawn",
+      "nonpicklable callback still rejected"
+    ],
+    "command": "python -m pytest vc_reader/tests/test_computed_pickle.py -q"
+  },
+  "existing_tests": {
+    "computed_and_pickled_writer_controls_passed": 2,
+    "point_and_source_reader_tests_passed": 25,
+    "subtests_passed": 23,
+    "cuda_skipped": 1,
+    "unique_tests_passed_including_regression": 35
+  },
+  "real_pipeline": {
+    "data": "PHerc0800 rendered CT crop",
+    "shape": [
+      3,
+      32,
+      32
+    ],
+    "values_compared_per_path": 3072,
+    "ct_sha256": "3d3978530ba2569cf61e584fd6105b74b2ada3338ae66a0898374549392b9a81",
+    "dtype": "float32",
+    "normalization": "float32 CT values divided by float32(255)",
+    "expected_sha256": "12c9d197e6b2319c2ca79ee7efbeaafd1d9ba858f87ea0f148bc25cb8c91f5f7",
+    "direct_sha256": "12c9d197e6b2319c2ca79ee7efbeaafd1d9ba858f87ea0f148bc25cb8c91f5f7",
+    "pickle_roundtrip_sha256": "12c9d197e6b2319c2ca79ee7efbeaafd1d9ba858f87ea0f148bc25cb8c91f5f7",
+    "spawn_dataloader_sha256": "12c9d197e6b2319c2ca79ee7efbeaafd1d9ba858f87ea0f148bc25cb8c91f5f7",
+    "batch_count": 1,
+    "workers": 1,
+    "multiprocessing_context": "spawn",
+    "all_pixels_identical": true
+  },
+  "environment": {
+    "platform": "Windows",
+    "python": "3.14.7",
+    "numpy": "2.5.4",
+    "torch": "2.15.0+cpu",
+    "zarr_test_dependency": "3.4.2",
+    "python_code": "Current checkout loaded ahead of the validated native package",
+    "native_provenance": {
+      "native_dll_sha256": "663cc7ade55704fd2aaa83f1db29d76a1c60774f2b53788a337304fcb1f3c127",
+      "native_source_base": "2d3fb38d33a18b257230c0bd23986436c3d4722e",
+      "native_adaptations": [
+        "PR #2566",
+        "PR #2422"
+      ],
+      "python_binding_adaptation": "PR #2533",
+      "temporary_cache_fix_in_this_native_dll": false
+    },
+    "native_files_sha256": {
+      "_catalog.cp314-win_amd64.pyd": "2fcf880b811b8f5b9a0e08467b4f5fd8ff089a888253ff886e9870992b27e7e2",
+      "_reader.cp314-win_amd64.pyd": "762d514c2e0ee2a966b8d56bf1e638573bc671052fd3f0432b8967f8fc46fef5",
+      "_thinning.cp314-win_amd64.pyd": "5217034202bbba903645e6c6e3d06648260d2ef479ca46fc1593ab0d9036f99b",
+      "_transforms.cp314-win_amd64.pyd": "a3220fa1896c42783708fbb8cfdd3e922c6c738dbec8542a3c8d34e29f5e2417",
+      "libvc_reader_native.dll": "663cc7ade55704fd2aaa83f1db29d76a1c60774f2b53788a337304fcb1f3c127",
+      "libvc_reader_sftp.dll": "f49691e0eff51616dd479199eba1e454d0ad9f02fc9950f8c9cfce248974f342"
+    }
+  },
+  "capture": {
+    "kind": "Native Notepad capture of saved pytest excerpts, not a live terminal",
+    "file": "validation-excerpts.png",
+    "source_text": "validation-excerpts.txt",
+    "raw_size": [
+      847,
+      549
+    ],
+    "crop": [
+      8,
+      85,
+      839,
+      399
+    ],
+    "processing": "Exact rectangular crop only, with no generated or replaced pixels",
+    "cursor": "Outside the crop; no cursor or halo remains"
+  },
+  "temporary_test_session_removed": true,
+  "limits": [
+    "Linux and macOS were not run",
+    "CUDA was not run; no CUDA or C++ algorithm changes",
+    "Native Windows runtime includes the already proposed shutdown fixes and binding adaptation listed above",
+    "A callback itself must remain picklable"
+  ]
+}
