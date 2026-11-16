@@ -1,0 +1,105 @@
+{
+  "status": "candidate; human review pending; no validation outside sampled overlap",
+  "direction": "20230206171837 -> 20230205180739",
+  "coordinates": "XYZ level-0 voxel indices; 7.91 um both sides",
+  "fit_points": 14,
+  "holdout_total": 15,
+  "holdout_reliable": 8,
+  "holdout_rejected": [
+    "level0-5",
+    "level0-7",
+    "level0-18",
+    "confirmation-0",
+    "confirmation-9",
+    "confirmation-12",
+    "confirmation-16"
+  ],
+  "holdout_residual_median_voxels": 0.5213511668269404,
+  "holdout_residual_max_voxels": 1.3649405269234236,
+  "holdout_all_candidate_ncc": [
+    0.8761553764343262,
+    0.9284458160400391,
+    0.9750379323959351,
+    0.9172704815864563,
+    0.9484072923660278,
+    0.8786585927009583,
+    0.9054742455482483,
+    0.9675978422164917,
+    0.9593862295150757,
+    0.9686379432678223,
+    0.9662829041481018,
+    0.9314277172088623,
+    0.8712239265441895,
+    0.9515717029571533,
+    0.9770157933235168
+  ],
+  "holdout_all_bootstrap_ncc": [
+    0.027951963245868683,
+    0.1124999150633812,
+    -0.2704544961452484,
+    -0.3642844557762146,
+    0.4265781044960022,
+    -0.13626910746097565,
+    -0.0701482892036438,
+    -0.045326072722673416,
+    0.3978634178638458,
+    -0.3997828960418701,
+    -0.2710931599140167,
+    -0.177046999335289,
+    0.16934186220169067,
+    0.0871237963438034,
+    0.023553429171442986
+  ],
+  "holdout_all_mirrored_ncc": [
+    0.34017613530158997,
+    0.5234012603759766,
+    0.12579163908958435,
+    0.23076225817203522,
+    0.07274109125137329,
+    0.19824017584323883,
+    0.1022515520453453,
+    0.17361733317375183,
+    0.6185092926025391,
+    0.7903305888175964,
+    0.18123917281627655,
+    0.28486573696136475,
+    0.4044606387615204,
+    -0.005239405203610659,
+    0.10344470292329788
+  ],
+  "model_selection": {
+    "method": "landmark-fit",
+    "model": "scaled-rigid9",
+    "parameters": 9,
+    "selection": "auto",
+    "landmark_pairs": 14,
+    "in_sample_rms": 0.4418,
+    "held_out_rms": 0.5762,
+    "candidates": [
+      {
+        "model": "similarity7",
+        "parameters": 7,
+        "in_sample_rms": 0.5475,
+        "held_out_rms": 0.6653
+      },
+      {
+        "model": "scaled-rigid9",
+        "parameters": 9,
+        "in_sample_rms": 0.4418,
+        "held_out_rms": 0.5762
+      },
+      {
+        "model": "affine12",
+        "parameters": 12,
+        "in_sample_rms": 0.424,
+        "held_out_rms": 0.6146
+      }
+    ],
+    "geometry": {
+      "scale": 0.999992,
+      "anisotropy": 1.0006,
+      "shear_deg": 0.0,
+      "reflected": false
+    }
+  }
+}
