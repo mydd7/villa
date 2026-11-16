@@ -1,6 +1,6 @@
 # Paris4 legacy 1B to 1A: registration candidate
 
-This measures the CT overlap missing from [villa #2312](https://github.com/ScrollPrize/villa/issues/2312). It provides a candidate transform from `20230206171837` (1B) to `20230205180739` (1A), using the existing registration cores. It is not an official registration or a complete answer to that issue. Human review is pending.
+Candidate registration for the two legacy Paris4 CT scans discussed in [villa #2312](https://github.com/ScrollPrize/villa/issues/2312): `20230206171837` (1B) to `20230205180739` (1A), using the existing registration cores. Human review is pending.
 
 The result could supply the missing first step for transferring legacy 1B surfaces. Its usefulness for the specific candidate OBJ, or for the current 2.4 um scan, has not been established. Neither was used as ground truth.
 
@@ -23,9 +23,9 @@ The candidate's windowed intensity correlation on **all 15** held-out blocks is 
 
 ## Reproduce
 
-Use a villa checkout at commit `2986ceb37befd31a1ac4572ff1f095cc671c7b89`. The numerical-core hashes and versions actually used are in `provenance.json`. The numerical environment differs from the pipeline's pinned requirements; those differences are recorded rather than claiming a locked pipeline run. No human review stages or decisions were filled in.
+Use a villa checkout at commit `2986ceb37befd31a1ac4572ff1f095cc671c7b89`. The numerical-core hashes and versions used are in `provenance.json`. The versions below differ from the pipeline's pinned requirements.
 
-The numerical run used Python 3.12.10, NumPy 2.5.4, SciPy 1.18.1, scikit-image 0.26.0, jsonschema 4.25.0 and Pillow 13.0.0. Capture used the existing Python 3.14 native `vc_reader`; its extension hashes are recorded. Capture and numerical analysis may run in separate environments. No new registration implementation or reader backend is provided.
+The numerical run used Python 3.12.10, NumPy 2.5.4, SciPy 1.18.1, scikit-image 0.26.0, jsonschema 4.25.0 and Pillow 13.0.0. Capture used the existing Python 3.14 native `vc_reader`; its extension hashes are recorded. Capture and numerical analysis may run in separate environments.
 
 From this directory, with the relevant dependencies already available:
 
@@ -43,7 +43,7 @@ Fine correspondence acceptance is fixed at: both blocks pass the core's texture/
 
 ## Review
 
-Open the 15 PNGs under `images/`. They include every held-out block, including rejected local measurements. Each contains three central orthogonal planes: fixed reference, bootstrap overlay, and candidate overlay. Fixed CT is red, moving CT is cyan; agreement appears gray. These show the same central 64-by-64 area scored numerically, enlarged four times with nearest-neighbor display. The 0.5/99.5 percent display windows are estimated once per scan from accepted fit blocks only and recorded in `display-windows.json`. No cursor, terminal screenshot, or personal path is present.
+Open the 15 PNGs under `images/`. They include every held-out block, including rejected local measurements. Each contains three central orthogonal planes: fixed reference, bootstrap overlay, and candidate overlay. Fixed CT is red, moving CT is cyan; agreement appears gray. These show the same central 64-by-64 area scored numerically, enlarged four times with nearest-neighbor display. The 0.5/99.5 percent display windows are estimated once per scan from accepted fit blocks only and recorded in `display-windows.json`.
 
 Before using this for labels, review matching layers in all three planes, obtain additional independent landmarks, check the legacy OBJ/TIFF frame, and test the modern scan directly. Do not treat the unmeasured part of 1B as registered merely by extrapolating this matrix.
 
