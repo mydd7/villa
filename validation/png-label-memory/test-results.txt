@@ -1,0 +1,12 @@
+Saved pytest result excerpts; these are not a live terminal capture.
+
+Before: base 14f56f2b39eec158addef00466ffe64570639dd1 plus the regression test.
+python -m pytest vesuvius/tests/ink_detection/test_label_pyramid_memory.py -q
+FFF....
+Memory regressions (gray,RGB,RGBA PNG): 3 failed; pixel/empty-plane controls: 4 passed.
+
+After: 045b423b449bdf5c04c7a0454a0ec8f693abfb36
+python -m pytest vesuvius/tests/ink_detection/test_label_pyramid_memory.py vesuvius/tests/ink_detection/test_label_zarr_preprocessing.py -q
+31 passed in 9.13s
+
+The 31 tests include 7 new cases and 24 existing label-preprocessing cases.

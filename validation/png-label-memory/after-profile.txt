@@ -1,0 +1,28 @@
+         332 function calls in 0.946 seconds
+
+   Ordered by: cumulative time
+   List reduced from 115 to 20 due to restriction <20>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.000    0.000    0.946    0.946 create_label_zarrs.py:262(convert_image)
+        1    0.000    0.000    0.934    0.934 create_label_zarrs.py:198(write_label_pyramid)
+        1    0.604    0.604    0.604    0.604 writer.py:273(__setitem__)
+        1    0.000    0.000    0.320    0.320 create_label_zarrs.py:222(_write_levels_above_zero)
+        2    0.320    0.160    0.320    0.160 writer.py:379(write_pyramid_level)
+        1    0.000    0.000    0.011    0.011 create_label_zarrs.py:146(load_image)
+        1    0.000    0.000    0.010    0.010 create_label_zarrs.py:156(_create_ome_zarr_datasets)
+        1    0.010    0.010    0.010    0.010 images.py:27(read)
+        3    0.000    0.000    0.006    0.002 writer.py:322(create_array)
+        3    0.005    0.002    0.005    0.002 writer.py:178(create)
+        1    0.002    0.002    0.002    0.002 writer.py:360(create_group)
+        3    0.000    0.000    0.002    0.001 writer.py:138(__setitem__)
+        3    0.000    0.000    0.002    0.001 writer.py:152(update)
+        3    0.002    0.001    0.002    0.001 writer.py:132(_write)
+        1    0.001    0.001    0.001    0.001 images.py:32(open)
+        3    0.000    0.000    0.000    0.000 writer.py:129(_read)
+        1    0.000    0.000    0.000    0.000 source_reader.py:31(__init__)
+        7    0.000    0.000    0.000    0.000 __init__.py:185(dumps)
+        7    0.000    0.000    0.000    0.000 encoder.py:185(encode)
+        7    0.000    0.000    0.000    0.000 encoder.py:207(iterencode)
+
+

@@ -1,0 +1,269 @@
+{
+  "base_commit": "14f56f2b39eec158addef00466ffe64570639dd1",
+  "source_sha256_before": "5c8b41c6b5741a79f4236a65240c3c6c06861fbe6cfb85c60fa54f5c13f86355",
+  "source_sha256_after": "207291185489831b1768b5132e85a627446114fc36fed3c098a6563a8d145cf3",
+  "data": {
+    "bucket": "hf://buckets/scrollprize/datasets",
+    "source_path": "ink/phercparis4/w00_20231016151002/w00_20231016151002_supervision_mask.tif",
+    "source_sha256": "70d5f3d7c849fdc24c04e903791adf047ec95f590246b7472e33f411ebc19a1a",
+    "source_shape_yx": [
+      32249,
+      51380
+    ],
+    "crop_yx": [
+      2048,
+      4097,
+      17408,
+      19713
+    ],
+    "pixel_sha256": "4c23d3f9d312d2669ac9bcead15aaca186228ccad17391c518cdf6b8ebc9695f",
+    "occupied_pixels": 53496,
+    "png_sha256": "9e1f4c09ab6c805f50b62a3e7f48a3274d311d2e3645a006aeba34bc5c67db62",
+    "fixture_crop_yx": [
+      3845,
+      3974,
+      19511,
+      19656
+    ],
+    "fixture_pixel_sha256": "77ef2ec2097a020c15d3854ef97d20fb8e742b8b5eb6f4332d2490e181ba08e0",
+    "fixture_png_sha256": "ef7d6431af7c6f5dee849802e2003f493dde4c95849bdee97c1cc3ea8e0eba4e",
+    "transformation": "Unmodified label values, cropped and losslessly encoded as PNG."
+  },
+  "iterations_per_version": 3,
+  "metrics": {
+    "before": {
+      "seconds": {
+        "min": 1.6452736999999615,
+        "median": 1.6652812000029371,
+        "max": 1.6723232000003918
+      },
+      "peak_working_set_bytes": {
+        "min": 570134528,
+        "median": 571088896,
+        "max": 571310080
+      },
+      "peak_private_commit_bytes": {
+        "min": 916209664,
+        "median": 917184512,
+        "max": 917544960
+      },
+      "numpy_python_peak_bytes": {
+        "min": 307032550,
+        "median": 307032600,
+        "max": 307032711
+      }
+    },
+    "after": {
+      "seconds": {
+        "min": 0.9378184999950463,
+        "median": 0.9463230999972438,
+        "max": 0.9744472000020323
+      },
+      "peak_working_set_bytes": {
+        "min": 262402048,
+        "median": 262938624,
+        "max": 264491008
+      },
+      "peak_private_commit_bytes": {
+        "min": 608374784,
+        "median": 609013760,
+        "max": 611049472
+      },
+      "numpy_python_peak_bytes": {
+        "min": 38935,
+        "median": 39170,
+        "max": 39304
+      }
+    }
+  },
+  "output_files_byte_identical": 33,
+  "shape_chunks_and_three_plane_hashes_identical": true,
+  "tests_before": {
+    "failed_memory": 3,
+    "passed_controls": 4
+  },
+  "tests_after": {
+    "passed_new": 7,
+    "passed_existing": 24
+  },
+  "methodology": [
+    "Separate Python process and fresh temporary output per conversion, Windows, one chunk worker, three pyramid levels.",
+    "cProfile and tracemalloc enabled for every timed conversion; process memory peaks read through psutil after conversion.",
+    "Source PNG is already in the OS file cache. Measurements exclude imports, input staging, output verification and cleanup.",
+    "All six runs compare every output file by SHA256; all33 files are byte-identical."
+  ],
+  "limitations": [
+    "Only one real label ROI measured; no full-scroll conversion or general throughput claim.",
+    "No Linux/macOS/CUDA run.",
+    "NumPy/Python allocation tracing excludes native allocations and cannot be interpreted as total process RAM.",
+    "Frozen Windows native runtime includes previously proposed adaptations #2533, #2566 and #2422. No native code changed.",
+    "The decoded source image still resides in memory. Only the65-plane Python volume is removed."
+  ],
+  "source_commit": "045b423b449bdf5c04c7a0454a0ec8f693abfb36",
+  "runtime": {
+    "native_files": {
+      "_catalog.cp314-win_amd64.pyd": "2fcf880b811b8f5b9a0e08467b4f5fd8ff089a888253ff886e9870992b27e7e2",
+      "_reader.cp314-win_amd64.pyd": "762d514c2e0ee2a966b8d56bf1e638573bc671052fd3f0432b8967f8fc46fef5",
+      "_thinning.cp314-win_amd64.pyd": "5217034202bbba903645e6c6e3d06648260d2ef479ca46fc1593ab0d9036f99b",
+      "_transforms.cp314-win_amd64.pyd": "a3220fa1896c42783708fbb8cfdd3e922c6c738dbec8542a3c8d34e29f5e2417",
+      "libvc_reader_native.dll": "663cc7ade55704fd2aaa83f1db29d76a1c60774f2b53788a337304fcb1f3c127",
+      "libvc_reader_sftp.dll": "f49691e0eff51616dd479199eba1e454d0ad9f02fc9950f8c9cfce248974f342"
+    },
+    "native_provenance": {
+      "native_dll_sha256": "663cc7ade55704fd2aaa83f1db29d76a1c60774f2b53788a337304fcb1f3c127",
+      "native_source_base": "2d3fb38d33a18b257230c0bd23986436c3d4722e",
+      "native_adaptations": [
+        "PR #2566",
+        "PR #2422"
+      ],
+      "python_binding_adaptation": "PR #2533",
+      "temporary_cache_fix_in_this_native_dll": false
+    }
+  },
+  "runs": {
+    "before": [
+      {
+        "source_commit": "14f56f2b39eec158addef00466ffe64570639dd1",
+        "source_file_sha256": "5c8b41c6b5741a79f4236a65240c3c6c06861fbe6cfb85c60fa54f5c13f86355",
+        "input_png_sha256": "9e1f4c09ab6c805f50b62a3e7f48a3274d311d2e3645a006aeba34bc5c67db62",
+        "seconds": 1.6452736999999615,
+        "numpy_python_peak_bytes": 307032600,
+        "peak_working_set_bytes": 571088896,
+        "peak_private_commit_bytes": 917184512
+      },
+      {
+        "source_commit": "14f56f2b39eec158addef00466ffe64570639dd1",
+        "source_file_sha256": "5c8b41c6b5741a79f4236a65240c3c6c06861fbe6cfb85c60fa54f5c13f86355",
+        "input_png_sha256": "9e1f4c09ab6c805f50b62a3e7f48a3274d311d2e3645a006aeba34bc5c67db62",
+        "seconds": 1.6652812000029371,
+        "numpy_python_peak_bytes": 307032711,
+        "peak_working_set_bytes": 570134528,
+        "peak_private_commit_bytes": 916209664
+      },
+      {
+        "source_commit": "14f56f2b39eec158addef00466ffe64570639dd1",
+        "source_file_sha256": "5c8b41c6b5741a79f4236a65240c3c6c06861fbe6cfb85c60fa54f5c13f86355",
+        "input_png_sha256": "9e1f4c09ab6c805f50b62a3e7f48a3274d311d2e3645a006aeba34bc5c67db62",
+        "seconds": 1.6723232000003918,
+        "numpy_python_peak_bytes": 307032550,
+        "peak_working_set_bytes": 571310080,
+        "peak_private_commit_bytes": 917544960
+      }
+    ],
+    "after": [
+      {
+        "source_commit": "045b423b449bdf5c04c7a0454a0ec8f693abfb36",
+        "source_file_sha256": "207291185489831b1768b5132e85a627446114fc36fed3c098a6563a8d145cf3",
+        "input_png_sha256": "9e1f4c09ab6c805f50b62a3e7f48a3274d311d2e3645a006aeba34bc5c67db62",
+        "seconds": 0.9463230999972438,
+        "numpy_python_peak_bytes": 39170,
+        "peak_working_set_bytes": 264491008,
+        "peak_private_commit_bytes": 611049472
+      },
+      {
+        "source_commit": "045b423b449bdf5c04c7a0454a0ec8f693abfb36",
+        "source_file_sha256": "207291185489831b1768b5132e85a627446114fc36fed3c098a6563a8d145cf3",
+        "input_png_sha256": "9e1f4c09ab6c805f50b62a3e7f48a3274d311d2e3645a006aeba34bc5c67db62",
+        "seconds": 0.9378184999950463,
+        "numpy_python_peak_bytes": 38935,
+        "peak_working_set_bytes": 262938624,
+        "peak_private_commit_bytes": 609013760
+      },
+      {
+        "source_commit": "045b423b449bdf5c04c7a0454a0ec8f693abfb36",
+        "source_file_sha256": "207291185489831b1768b5132e85a627446114fc36fed3c098a6563a8d145cf3",
+        "input_png_sha256": "9e1f4c09ab6c805f50b62a3e7f48a3274d311d2e3645a006aeba34bc5c67db62",
+        "seconds": 0.9744472000020323,
+        "numpy_python_peak_bytes": 39304,
+        "peak_working_set_bytes": 262402048,
+        "peak_private_commit_bytes": 608374784
+      }
+    ]
+  },
+  "output_files": {
+    ".zattrs": "b7a44e7330262be8a4d6ff287949320005aa99ce6474f224fb00ea4f746ac6ec",
+    ".zgroup": "2b31f1f542fb152b20ff3afe0da0ed76e15b34cd4320854e2d1e6d8671b29d85",
+    "0/.zarray": "e396f8f6eeda63cd3153de3843d5282d7a9a89d97de36f7c77a47b8755fb18c7",
+    "0/.zattrs": "4136abbc148b73b1ccf19a9ccf3a633f85d70d52073044efbea6fc69d08f7581",
+    "1/.zarray": "8c3bbafafd583fac86bf8cc5e98fe4552a6793ff95c8402a907b548b6a384f9a",
+    "1/.zattrs": "4136abbc148b73b1ccf19a9ccf3a633f85d70d52073044efbea6fc69d08f7581",
+    "2/.zarray": "a4fea65e1390ae8c0bc9b17cbb987b9bb543a2ec00307df3bd73b0fedef6ebb0",
+    "2/.zattrs": "4136abbc148b73b1ccf19a9ccf3a633f85d70d52073044efbea6fc69d08f7581",
+    "2/0/3/3": "bdc361fa92224c073a7c590e5d68cc97fb16d7a86e641e916b5b81110875ae14",
+    "2/0/3/4": "6d30be7ef6e13b7c70eae92e423aee7c5b392558eee3332e49a3ca072e5dacb8",
+    "2/0/4/3": "596eb7e1b957c0d2e21b8734add6892cd45cd8d44787dd6369ca81abf4946dd5",
+    "2/0/4/4": "52114bb6b377ff123b4afe169b8fb0425f7900f87aa2ca2590a70b472b1425a9",
+    "1/0/6/8": "8c8c6be0224c61c6220e465816e4a276d6bd9715d13312ac4f90d4b9f9e1d426",
+    "1/0/6/9": "00c0da74ebaa81ec4a21e984998914685e09f5208aa9cac1ac29b53a58d0ee14",
+    "1/0/7/7": "8724db12276fd2ce124a5e769cb8c0733bc81b8da586906ab023acf1ff4db14e",
+    "1/0/7/8": "dcb76ebec7fcfa6e7d5c014beb91956ecd7643bfc5a2491311947a5238496ea9",
+    "1/0/7/9": "beca16d06494be5a2b8c1054bed183f8e0df5f769641da55133118150c2fa563",
+    "1/0/8/7": "db682871e0b9802c520713c0578c9d27fe1387185aa138cd5a6115556d073944",
+    "1/0/8/8": "fee6ef7942cd6391f5fdd02b3051fd96c572baa612c151461e681092c8bf0abf",
+    "1/0/8/9": "275a1a144b5c258819bc8b23da2b1cad234c97762bcf0fbf059c14f9bdd1fd32",
+    "0/0/13/17": "c1546bd7c99af519ebbcb4c067cbe03c3fd8435232f33f3484b2eb1c2330959e",
+    "0/0/13/18": "c2fa99ace8ce6544c283da0e3ba1f6a2044d1e5c1a3ea486dd0e69fcbc7c5f15",
+    "0/0/14/16": "2a11ed99dfc0aeaf6bf12b9ecbb49f994e4210b7fe65f3b7b7e060ffbbd928bb",
+    "0/0/14/17": "732ea6b860f18a6d2630d6963d60fd0d98540c682685aaaeea31dbc3deb91358",
+    "0/0/14/18": "beca16d06494be5a2b8c1054bed183f8e0df5f769641da55133118150c2fa563",
+    "0/0/15/15": "a056f2ec390ae5862b11727460ad0ea1efc76d1f4063374677fdac283a639951",
+    "0/0/15/16": "c4ae7bb4627c0fd92364fca5327bf9403e8d7a17c92c3f5dd61828c6def0e1ca",
+    "0/0/15/17": "d9b64711697ff341fbe9bc63eaf26d9a99fffaf3a9a9ea088bcb30283720eafb",
+    "0/0/15/18": "beca16d06494be5a2b8c1054bed183f8e0df5f769641da55133118150c2fa563",
+    "0/0/16/15": "30c046d6b69ae46121ded4e3c17373c86fc26710339c6ccfc6c14cd11b3c38a3",
+    "0/0/16/16": "fee6ef7942cd6391f5fdd02b3051fd96c572baa612c151461e681092c8bf0abf",
+    "0/0/16/17": "fee6ef7942cd6391f5fdd02b3051fd96c572baa612c151461e681092c8bf0abf",
+    "0/0/16/18": "275a1a144b5c258819bc8b23da2b1cad234c97762bcf0fbf059c14f9bdd1fd32"
+  },
+  "levels": [
+    {
+      "shape": [
+        65,
+        2049,
+        2305
+      ],
+      "chunks": [
+        65,
+        128,
+        128
+      ],
+      "plane_sha256": "4c23d3f9d312d2669ac9bcead15aaca186228ccad17391c518cdf6b8ebc9695f"
+    },
+    {
+      "shape": [
+        65,
+        1025,
+        1153
+      ],
+      "chunks": [
+        65,
+        128,
+        128
+      ],
+      "plane_sha256": "f26958ba4ef91cfa57462bcabe91b24d798711efa195bd6737ea431418b3838f"
+    },
+    {
+      "shape": [
+        65,
+        513,
+        577
+      ],
+      "chunks": [
+        65,
+        128,
+        128
+      ],
+      "plane_sha256": "864dc88e7aabe3c2215502c959e60c9ad35abf18ae5de7b509c62a86da3f4541"
+    }
+  ],
+  "environment": {
+    "os": "Windows x64",
+    "python": "3.14.7",
+    "numpy": "2.5.4",
+    "psutil": "7.2.2",
+    "ram_gib": 32,
+    "cpu": "AMD Ryzen 5 7500F,6 cores/12 threads"
+  },
+  "reproduction_script_sha256": "e75fd52b48014c12d8bcb5b2e67ad26431dd2df89f03c489446b24277f9106e7",
+  "source_normalized_sha256_after": "91b20e6e6fc4926ea3ab423cc28fd26fc0a3fa2b2423a07f7885eae47becc1f0"
+}
