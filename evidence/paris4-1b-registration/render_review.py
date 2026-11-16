@@ -30,7 +30,7 @@ for key in ['a', 'b']:
             histogram += np.bincount(values.ravel(), minlength=256)
     cdf = np.cumsum(histogram) / histogram.sum()
     windows[key] = [int(np.searchsorted(cdf, q)) for q in [.005, .995]]
-(here / 'display-windows.json').write_text(json.dumps(windows, indent=2) + '\n')
+(here / 'display-windows.json').write_text(json.dumps(windows, indent=2) + '\n', encoding='utf-8', newline='\n')
 output = here / 'images'
 output.mkdir(exist_ok=True)
 font = ImageFont.load_default(size=18)

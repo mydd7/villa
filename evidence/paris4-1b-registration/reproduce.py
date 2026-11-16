@@ -8,7 +8,7 @@ import numpy as np
 
 
 def save(path, value):
-    path.write_text(json.dumps(value, indent=2, allow_nan=False) + '\n', encoding='utf-8')
+    path.write_text(json.dumps(value, indent=2, allow_nan=False) + '\n', encoding='utf-8', newline='\n')
 
 
 def main():
