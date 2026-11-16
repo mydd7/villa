@@ -1,0 +1,16 @@
+Saved pytest output excerpts - Windows
+
+Before: shipped ink configuration paths
+E               AssertionError: assert '/path/to/ink...e-volume.zarr' == '\\path\\to\\...e-volume.zarr'
+E                 
+E                 - \path\to\ink_9um\labels\aligned-scrollprizeorg-21slices\pherc0139-w016\surface-volume.zarr
+E                 ? ^    ^  ^       ^      ^                               ^              ^
+E                 + /path/to/ink_9um/labels/aligned-scrollprizeorg-21slices/pherc0139-w016/surface-volume.zarr
+E                 ? ^    ^  ^       ^      ^                               ^              ^
+1 failed, 2 passed in 3.25s
+
+After: expected paths use PurePosixPath
+3 passed in 3.26s
+
+Full ink suite, isolated native reader with PR #2422
+419 passed, 9 skipped in 43.16s

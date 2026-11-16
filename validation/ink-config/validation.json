@@ -1,0 +1,24 @@
+{
+  "branch": "test/ink-config-posix-paths",
+  "commit": "6eba3be8bbd9000621a6ed82fbac76cd59cbf395",
+  "before": {
+    "failed": 1,
+    "passed": 2
+  },
+  "after_targeted": {
+    "passed": 3,
+    "exit_code": 0
+  },
+  "after_full": {
+    "passed": 419,
+    "skipped": 9,
+    "exit_code": 0,
+    "native_adaptation": "Existing PR #2422 in an isolated reader; original frozen runtime preserved"
+  },
+  "platform": "Windows Python 3.14 CPU",
+  "motivation": "Configuration consistency check encountered while validating real PHerc0800 ink inference",
+  "limitations": [
+    "Full-suite shutdown with the original native reader hangs after reporting its results",
+    "Linux and macOS were not run"
+  ]
+}
