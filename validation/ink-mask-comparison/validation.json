@@ -1,0 +1,109 @@
+{
+  "compared_prs": [
+    {
+      "url": "https://github.com/ScrollPrize/villa/pull/2567",
+      "head": "3e8d5228600fa26f5a601db0665c005c8315504b",
+      "mode": "default masking"
+    },
+    {
+      "url": "https://github.com/ScrollPrize/villa/pull/2582",
+      "head": "c98366c2e37052458dd90891d3a9d281bcf991f7",
+      "mode": "--mask-off-surface"
+    }
+  ],
+  "scope": "Independent Windows CPU comparison on one real surface. No claim about ink-reading accuracy, performance, or untested devices.",
+  "environment": {
+    "platform": "Windows x64",
+    "cpu": "AMD Ryzen 5 7500F",
+    "ram_gib": 32,
+    "python": "3.14.7",
+    "numpy": "2.5.4",
+    "torch": "2.15.0+cpu",
+    "openvino": "2026.4.1",
+    "threads": 4
+  },
+  "data": {
+    "volume": "s3://vesuvius-challenge-open-data/PHerc0800/volumes/20250521135224-8.640um-1.2m-116keV-masked.zarr/",
+    "surface": "20251029010146-auto_grown_20251029010146642",
+    "mesh": "PHerc0800/segments/20251029010146-auto_grown_20251029010146642/mesh/20251029010146-on-20250521135224-8.64um.tifxyz/",
+    "render_options": "--scale 1 --group-idx 0 --num-slices 21 --flip-normals --voxel-size 8.64 --voxel-unit micrometer",
+    "input_shape_zyx": [
+      21,
+      980,
+      980
+    ],
+    "selected_layers": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "checkpoint": "scrollprize/ink_9um hybrid_3d2d-seed42/step-075000.pth",
+    "checkpoint_sha256": "e635558ae6a1a807a7e5ec1e83adfd45bc3c0ac53883ea43f1d4e085d62a9cab",
+    "input_fingerprint": {
+      "selected_shape": [
+        17,
+        980,
+        980
+      ],
+      "selected_ct_sha256": "9b6a093a393de9716292187d702ae0a1fd4a9b45257e516e729be766cfa725a2",
+      "support_sha256": "2df583e863607f0da81ce6517c54aa37baa0c7d282b9e6b06a09979a6d6663c4",
+      "supported_pixels": 497600
+    }
+  },
+  "results": [
+    {
+      "tta_mirror": false,
+      "shape": [
+        980,
+        980
+      ],
+      "dtype": "uint8",
+      "equal_to_2567": true,
+      "different_pixels": 0,
+      "max_abs_difference": 0,
+      "pixel_sha256": "d615ff2215fe3b1066e95f64eaa7cbdd866ebbbe4a0ff807280fbd3f26997566"
+    },
+    {
+      "tta_mirror": true,
+      "shape": [
+        980,
+        980
+      ],
+      "dtype": "uint8",
+      "equal_to_2567": true,
+      "different_pixels": 0,
+      "max_abs_difference": 0,
+      "pixel_sha256": "fdeb05090e31231479a3f5a2af9a2c31b3ca9998f829f103f5e16a9bfc16f179"
+    }
+  ],
+  "other_pr_cli_runs": [
+    {
+      "tta_mirror": false,
+      "exit_code": 0,
+      "elapsed_seconds": 20.833127600002626
+    },
+    {
+      "tta_mirror": true,
+      "exit_code": 0,
+      "elapsed_seconds": 71.39942750000046
+    }
+  ],
+  "method": "Run the infer.py from #2582 against the unchanged inference dependencies on 14f56f2, then compare to the previously validated #2567 Torch outputs. The previous validation also had the #2453 backend selector, set to torch. All source changes and native adaptations are recorded in the linked integration protocol. No #2582 files committed to our source branch.",
+  "integration_protocol": "https://github.com/mydd7/villa/blob/f485186a273bf4738f21b02e247785941724339a/validation/openvino-mask-integration/README.txt",
+  "infer_2582_sha256": "bee53b6466ca8b64ab0a54dc091b0788532c5590d986165925300363067e1675",
+  "remaining_policy_choice": "#2567 masks by default; #2582 preserves the old default and requires --mask-off-surface. This comparison does not resolve that policy choice."
+}
