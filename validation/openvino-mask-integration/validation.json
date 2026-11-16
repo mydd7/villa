@@ -1,0 +1,211 @@
+{
+  "upstream_backend_pr": "https://github.com/ScrollPrize/villa/pull/2453",
+  "backend_commit": "90ed975861cdb02e7b6a5ec254d2ac3d4eea76c0",
+  "mask_pr": "https://github.com/ScrollPrize/villa/pull/2567",
+  "mask_commit": "3e8d5228600fa26f5a601db0665c005c8315504b",
+  "integration_base": "14f56f2b39eec158addef00466ffe64570639dd1",
+  "method": "Only the two backend source files from #2453 and the inference source change from #2567 applied to the integration base. Frozen native runtime shared by all 8 separate CLI processes.",
+  "environment": {
+    "platform": "Windows x64",
+    "cpu": "AMD Ryzen 5 7500F",
+    "ram_gib": 32,
+    "python": "3.14.7",
+    "numpy": "2.5.4",
+    "torch": "2.15.0+cpu",
+    "openvino": "2026.4.1",
+    "threads": 4
+  },
+  "data": {
+    "volume": "s3://vesuvius-challenge-open-data/PHerc0800/volumes/20250521135224-8.640um-1.2m-116keV-masked.zarr/",
+    "surface": "20251029010146-auto_grown_20251029010146642",
+    "mesh": "PHerc0800/segments/20251029010146-auto_grown_20251029010146642/mesh/20251029010146-on-20250521135224-8.64um.tifxyz/",
+    "render_options": "--scale 1 --group-idx 0 --num-slices 21 --flip-normals --voxel-size 8.64 --voxel-unit micrometer",
+    "input_shape_zyx": [
+      21,
+      980,
+      980
+    ],
+    "selected_layers": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "checkpoint": "scrollprize/ink_9um hybrid_3d2d-seed42/step-075000.pth",
+    "checkpoint_sha256": "e635558ae6a1a807a7e5ec1e83adfd45bc3c0ac53883ea43f1d4e085d62a9cab",
+    "input_fingerprint": {
+      "selected_shape": [
+        17,
+        980,
+        980
+      ],
+      "selected_ct_sha256": "9b6a093a393de9716292187d702ae0a1fd4a9b45257e516e729be766cfa725a2",
+      "support_sha256": "2df583e863607f0da81ce6517c54aa37baa0c7d282b9e6b06a09979a6d6663c4",
+      "supported_pixels": 497600
+    }
+  },
+  "cases": [
+    {
+      "tta_mirror": false,
+      "shape": [
+        980,
+        980
+      ],
+      "pixels": 960400,
+      "ct_supported_pixels": 497600,
+      "empty_ct_pixels": 462800,
+      "before_mask": {
+        "max_abs_difference": 2,
+        "different_pixels": 23562,
+        "difference_gt_one": 9,
+        "ct_supported_max_difference": 1,
+        "ct_supported_different_pixels": 2639,
+        "mean_abs_difference": 0.02454289879216993
+      },
+      "after_mask": {
+        "max_abs_difference": 1,
+        "different_pixels": 2639,
+        "difference_gt_one": 0,
+        "ct_supported_max_difference": 1,
+        "ct_supported_different_pixels": 2639,
+        "mean_abs_difference": 0.002747813411078717
+      },
+      "torch": {
+        "supported_pixels_byte_identical_before_after": true,
+        "empty_ct_after_nonzero": 0,
+        "empty_ct_before_nonzero": 310848,
+        "before_pixel_sha256": "3f7f949394051ab1b9da4eb134d80c9555bd742a3bdda714b6acdc416f69458f",
+        "after_pixel_sha256": "d615ff2215fe3b1066e95f64eaa7cbdd866ebbbe4a0ff807280fbd3f26997566"
+      },
+      "openvino": {
+        "supported_pixels_byte_identical_before_after": true,
+        "empty_ct_after_nonzero": 0,
+        "empty_ct_before_nonzero": 310848,
+        "before_pixel_sha256": "8374fafc3d1b9d7b8fe24dea9147bba991c52f132ad2b95b0f7a95cb1aa69f0d",
+        "after_pixel_sha256": "205d7e8d0845e4d252b2f7ed973e901e9f576cd7407e940cdb6f87b72136b15a"
+      }
+    },
+    {
+      "tta_mirror": true,
+      "shape": [
+        980,
+        980
+      ],
+      "pixels": 960400,
+      "ct_supported_pixels": 497600,
+      "empty_ct_pixels": 462800,
+      "before_mask": {
+        "max_abs_difference": 1,
+        "different_pixels": 13542,
+        "difference_gt_one": 0,
+        "ct_supported_max_difference": 1,
+        "ct_supported_different_pixels": 1873,
+        "mean_abs_difference": 0.014100374843815077
+      },
+      "after_mask": {
+        "max_abs_difference": 1,
+        "different_pixels": 1873,
+        "difference_gt_one": 0,
+        "ct_supported_max_difference": 1,
+        "ct_supported_different_pixels": 1873,
+        "mean_abs_difference": 0.001950229071220325
+      },
+      "torch": {
+        "supported_pixels_byte_identical_before_after": true,
+        "empty_ct_after_nonzero": 0,
+        "empty_ct_before_nonzero": 310848,
+        "before_pixel_sha256": "227b05a50b4889f77dc2acf0f8b4de2696b8b2b7040755624b07531ea1ec39d7",
+        "after_pixel_sha256": "fdeb05090e31231479a3f5a2af9a2c31b3ca9998f829f103f5e16a9bfc16f179"
+      },
+      "openvino": {
+        "supported_pixels_byte_identical_before_after": true,
+        "empty_ct_after_nonzero": 0,
+        "empty_ct_before_nonzero": 310848,
+        "before_pixel_sha256": "089a6526fcbfcb3bb14cdfd6dc3f6c34b5100920e157d009b8baec5be0850567",
+        "after_pixel_sha256": "a0af7a3f22ee9df93f189c88396a11de47287523de059db9ef3fcc7982a504e5"
+      }
+    }
+  ],
+  "runs": [
+    {
+      "case": "torch-plain",
+      "exit_code": 0,
+      "elapsed_seconds": 21.733962999998766
+    },
+    {
+      "case": "openvino-plain",
+      "exit_code": 0,
+      "elapsed_seconds": 20.772640899995167
+    },
+    {
+      "case": "torch-tta",
+      "exit_code": 0,
+      "elapsed_seconds": 69.65884609999921
+    },
+    {
+      "case": "openvino-tta",
+      "exit_code": 0,
+      "elapsed_seconds": 41.83240870000009
+    },
+    {
+      "case": "masked-torch-plain",
+      "exit_code": 0,
+      "elapsed_seconds": 20.72266949999903
+    },
+    {
+      "case": "masked-openvino-plain",
+      "exit_code": 0,
+      "elapsed_seconds": 20.334371000004467
+    },
+    {
+      "case": "masked-torch-tta",
+      "exit_code": 0,
+      "elapsed_seconds": 69.41706149999663
+    },
+    {
+      "case": "masked-openvino-tta",
+      "exit_code": 0,
+      "elapsed_seconds": 41.82794670000294
+    }
+  ],
+  "limitations": [
+    "One model/checkpoint and one real surface; no ensemble, CUDA/MPS or Linux/macOS run.",
+    "Runs are single correctness checks including imports and conversion, not a speed benchmark.",
+    "No ground-truth ink labels used: this checks numeric parity and empty-CT masking, not ink accuracy or legibility.",
+    "The unmasked non-TTA result has9 pixels differing by2 gray levels, all outside CT support.",
+    "Native runtime uses the previously proposed Windows adaptations #2533,#2566,#2422."
+  ],
+  "native_runtime": {
+    "native_dll_sha256": "663cc7ade55704fd2aaa83f1db29d76a1c60774f2b53788a337304fcb1f3c127",
+    "native_source_base": "2d3fb38d33a18b257230c0bd23986436c3d4722e",
+    "native_adaptations": [
+      "PR #2566",
+      "PR #2422"
+    ],
+    "python_binding_adaptation": "PR #2533",
+    "temporary_cache_fix_in_this_native_dll": false
+  },
+  "source_normalized_sha256": {
+    "backend_only": {
+      "infer.py": "00755438aaa048d1a99d0dece2c8cb5f38103699a4d29d664235b5221bc61b3a",
+      "inference_runtime.py": "5fd0c0e9f7f73350dfd38d8d19cb526ac53031378ea258c59abfdc3cd190276c"
+    },
+    "backend_and_mask": {
+      "infer.py": "bfe941e8336858bc3559c12dffaff3bf7cfcd305851adbe848e7340f6b1ca6d1",
+      "inference_runtime.py": "5fd0c0e9f7f73350dfd38d8d19cb526ac53031378ea258c59abfdc3cd190276c"
+    }
+  }
+}
