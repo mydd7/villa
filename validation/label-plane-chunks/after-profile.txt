@@ -1,0 +1,28 @@
+         165356 function calls in 27.993 seconds
+
+   Ordered by: cumulative time
+   List reduced from 135 to 20 due to restriction <20>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.010    0.010   27.994   27.994 create_label_zarrs.py:276(convert_image)
+        1    0.022    0.022   17.252   17.252 create_label_zarrs.py:258(_write_streamed_tiff_level_zero)
+     1632   15.508    0.010   15.586    0.010 writer.py:273(__setitem__)
+        1    0.000    0.000   10.691   10.691 create_label_zarrs.py:222(_write_levels_above_zero)
+        5   10.691    2.138   10.691    2.138 writer.py:379(write_pyramid_level)
+     1632    0.029    0.000    1.643    0.001 source_reader.py:120(__getitem__)
+     1632    1.573    0.001    1.574    0.001 source_reader.py:136(read)
+     3264    0.021    0.000    0.060    0.000 _indexing.py:9(parse_index)
+        1    0.000    0.000    0.039    0.039 create_label_zarrs.py:156(_create_ome_zarr_datasets)
+        6    0.000    0.000    0.033    0.005 writer.py:322(create_array)
+        6    0.032    0.005    0.032    0.005 writer.py:178(create)
+     1632    0.002    0.000    0.031    0.000 _stride_tricks_impl.py:474(broadcast_to)
+     1632    0.024    0.000    0.029    0.000 _stride_tricks_impl.py:447(_broadcast_to)
+     3264    0.016    0.000    0.026    0.000 _indexing.py:40(expand_index)
+     3264    0.005    0.000    0.007    0.000 {built-in method builtins.sum}
+     1637    0.007    0.000    0.007    0.000 writer.py:253(shape)
+     1632    0.005    0.000    0.005    0.000 writer.py:261(dtype)
+     3273    0.004    0.000    0.005    0.000 source_reader.py:62(_engine)
+     6528    0.004    0.000    0.004    0.000 {method 'indices' of 'slice' objects}
+        6    0.000    0.000    0.004    0.001 writer.py:138(__setitem__)
+
+

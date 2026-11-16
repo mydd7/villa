@@ -1,0 +1,28 @@
+         165331 function calls in 368.226 seconds
+
+   Ordered by: cumulative time
+   List reduced from 133 to 20 due to restriction <20>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.008    0.008  368.227  368.227 baseline.py:279(convert_image)
+        1    0.037    0.037  230.117  230.117 baseline.py:261(_write_streamed_tiff_level_zero)
+     1632  228.166    0.140  228.257    0.140 writer.py:273(__setitem__)
+        1    0.000    0.000  138.064  138.064 baseline.py:239(_write_levels_above_zero)
+        5  138.063   27.613  138.064   27.613 writer.py:379(write_pyramid_level)
+     1632    0.041    0.000    1.822    0.001 source_reader.py:120(__getitem__)
+     1632    1.720    0.001    1.721    0.001 source_reader.py:136(read)
+     3264    0.028    0.000    0.079    0.000 _indexing.py:9(parse_index)
+        1    0.000    0.000    0.037    0.037 baseline.py:172(_create_ome_zarr_datasets)
+     1632    0.003    0.000    0.037    0.000 _stride_tricks_impl.py:474(broadcast_to)
+     1632    0.028    0.000    0.034    0.000 _stride_tricks_impl.py:447(_broadcast_to)
+     3264    0.022    0.000    0.034    0.000 _indexing.py:40(expand_index)
+        6    0.000    0.000    0.029    0.005 writer.py:322(create_array)
+        6    0.029    0.005    0.029    0.005 writer.py:178(create)
+     3264    0.006    0.000    0.009    0.000 {built-in method builtins.sum}
+     1632    0.008    0.000    0.008    0.000 writer.py:253(shape)
+     3273    0.006    0.000    0.008    0.000 source_reader.py:62(_engine)
+     6528    0.007    0.000    0.007    0.000 {method 'indices' of 'slice' objects}
+     1632    0.005    0.000    0.005    0.000 writer.py:261(dtype)
+        6    0.000    0.000    0.005    0.001 writer.py:138(__setitem__)
+
+

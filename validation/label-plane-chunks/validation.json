@@ -1,0 +1,459 @@
+{
+  "upstream_base": "e413746da00ba333cd90974da6b82c487cdbb641",
+  "source_commit": "2986ceb37befd31a1ac4572ff1f095cc671c7b89",
+  "source_parent": "045b423b449bdf5c04c7a0454a0ec8f693abfb36",
+  "environment": {
+    "os": "Windows x64",
+    "python": "3.14.7",
+    "numpy": "2.5.4",
+    "psutil": "7.2.2",
+    "ram_gib": 32,
+    "cpu": "AMD Ryzen 5 7500F,6 cores/12 threads"
+  },
+  "native_runtime": {
+    "native_files": {
+      "_catalog.cp314-win_amd64.pyd": "2fcf880b811b8f5b9a0e08467b4f5fd8ff089a888253ff886e9870992b27e7e2",
+      "_reader.cp314-win_amd64.pyd": "762d514c2e0ee2a966b8d56bf1e638573bc671052fd3f0432b8967f8fc46fef5",
+      "_thinning.cp314-win_amd64.pyd": "5217034202bbba903645e6c6e3d06648260d2ef479ca46fc1593ab0d9036f99b",
+      "_transforms.cp314-win_amd64.pyd": "a3220fa1896c42783708fbb8cfdd3e922c6c738dbec8542a3c8d34e29f5e2417",
+      "libvc_reader_native.dll": "663cc7ade55704fd2aaa83f1db29d76a1c60774f2b53788a337304fcb1f3c127",
+      "libvc_reader_sftp.dll": "f49691e0eff51616dd479199eba1e454d0ad9f02fc9950f8c9cfce248974f342"
+    },
+    "native_provenance": {
+      "native_dll_sha256": "663cc7ade55704fd2aaa83f1db29d76a1c60774f2b53788a337304fcb1f3c127",
+      "native_source_base": "2d3fb38d33a18b257230c0bd23986436c3d4722e",
+      "native_adaptations": [
+        "PR #2566",
+        "PR #2422"
+      ],
+      "python_binding_adaptation": "PR #2533",
+      "temporary_cache_fix_in_this_native_dll": false
+    }
+  },
+  "input": {
+    "url": "https://huggingface.co/buckets/scrollprize/datasets/resolve/ink/phercparis4/w00_20231016151002/w00_20231016151002_supervision_mask.tif",
+    "sha256": "70d5f3d7c849fdc24c04e903791adf047ec95f590246b7472e33f411ebc19a1a",
+    "shape_yx": [
+      32249,
+      51380
+    ],
+    "dtype": "uint8",
+    "levels": 6,
+    "reduction": "nearest",
+    "chunk_workers": 1
+  },
+  "runs": {
+    "before": [
+      {
+        "seconds": 368.227346700005,
+        "cpu_seconds": 507.65625,
+        "baseline": true,
+        "peak_working_set_bytes": 1408073728,
+        "levels": [
+          {
+            "shape": [
+              65,
+              32249,
+              51380
+            ],
+            "chunks": [
+              65,
+              128,
+              128
+            ]
+          },
+          {
+            "shape": [
+              65,
+              16125,
+              25690
+            ],
+            "chunks": [
+              65,
+              128,
+              128
+            ]
+          },
+          {
+            "shape": [
+              65,
+              8063,
+              12845
+            ],
+            "chunks": [
+              65,
+              128,
+              128
+            ]
+          },
+          {
+            "shape": [
+              65,
+              4032,
+              6423
+            ],
+            "chunks": [
+              65,
+              128,
+              128
+            ]
+          },
+          {
+            "shape": [
+              65,
+              2016,
+              3212
+            ],
+            "chunks": [
+              65,
+              128,
+              128
+            ]
+          },
+          {
+            "shape": [
+              65,
+              1008,
+              1606
+            ],
+            "chunks": [
+              65,
+              128,
+              128
+            ]
+          }
+        ],
+        "output_files": 9160,
+        "output_bytes": 3263347,
+        "source_sha256": "70d5f3d7c849fdc24c04e903791adf047ec95f590246b7472e33f411ebc19a1a"
+      },
+      {
+        "seconds": 390.69157290000294,
+        "cpu_seconds": 528.765625,
+        "baseline": true,
+        "peak_working_set_bytes": 1407729664,
+        "levels": [
+          {
+            "shape": [
+              65,
+              32249,
+              51380
+            ],
+            "chunks": [
+              65,
+              128,
+              128
+            ]
+          },
+          {
+            "shape": [
+              65,
+              16125,
+              25690
+            ],
+            "chunks": [
+              65,
+              128,
+              128
+            ]
+          },
+          {
+            "shape": [
+              65,
+              8063,
+              12845
+            ],
+            "chunks": [
+              65,
+              128,
+              128
+            ]
+          },
+          {
+            "shape": [
+              65,
+              4032,
+              6423
+            ],
+            "chunks": [
+              65,
+              128,
+              128
+            ]
+          },
+          {
+            "shape": [
+              65,
+              2016,
+              3212
+            ],
+            "chunks": [
+              65,
+              128,
+              128
+            ]
+          },
+          {
+            "shape": [
+              65,
+              1008,
+              1606
+            ],
+            "chunks": [
+              65,
+              128,
+              128
+            ]
+          }
+        ],
+        "output_files": 9160,
+        "output_bytes": 3263347,
+        "source_sha256": "70d5f3d7c849fdc24c04e903791adf047ec95f590246b7472e33f411ebc19a1a"
+      }
+    ],
+    "after": [
+      {
+        "seconds": 27.99417999999423,
+        "cpu_seconds": 32.359375,
+        "baseline": false,
+        "peak_working_set_bytes": 1394184192,
+        "levels": [
+          {
+            "shape": [
+              65,
+              32249,
+              51380
+            ],
+            "chunks": [
+              1,
+              128,
+              128
+            ]
+          },
+          {
+            "shape": [
+              65,
+              16125,
+              25690
+            ],
+            "chunks": [
+              1,
+              128,
+              128
+            ]
+          },
+          {
+            "shape": [
+              65,
+              8063,
+              12845
+            ],
+            "chunks": [
+              1,
+              128,
+              128
+            ]
+          },
+          {
+            "shape": [
+              65,
+              4032,
+              6423
+            ],
+            "chunks": [
+              1,
+              128,
+              128
+            ]
+          },
+          {
+            "shape": [
+              65,
+              2016,
+              3212
+            ],
+            "chunks": [
+              1,
+              128,
+              128
+            ]
+          },
+          {
+            "shape": [
+              65,
+              1008,
+              1606
+            ],
+            "chunks": [
+              1,
+              128,
+              128
+            ]
+          }
+        ],
+        "output_files": 9160,
+        "output_bytes": 605993,
+        "source_sha256": "70d5f3d7c849fdc24c04e903791adf047ec95f590246b7472e33f411ebc19a1a"
+      },
+      {
+        "seconds": 27.89424229999713,
+        "cpu_seconds": 33.34375,
+        "baseline": false,
+        "peak_working_set_bytes": 1395298304,
+        "levels": [
+          {
+            "shape": [
+              65,
+              32249,
+              51380
+            ],
+            "chunks": [
+              1,
+              128,
+              128
+            ]
+          },
+          {
+            "shape": [
+              65,
+              16125,
+              25690
+            ],
+            "chunks": [
+              1,
+              128,
+              128
+            ]
+          },
+          {
+            "shape": [
+              65,
+              8063,
+              12845
+            ],
+            "chunks": [
+              1,
+              128,
+              128
+            ]
+          },
+          {
+            "shape": [
+              65,
+              4032,
+              6423
+            ],
+            "chunks": [
+              1,
+              128,
+              128
+            ]
+          },
+          {
+            "shape": [
+              65,
+              2016,
+              3212
+            ],
+            "chunks": [
+              1,
+              128,
+              128
+            ]
+          },
+          {
+            "shape": [
+              65,
+              1008,
+              1606
+            ],
+            "chunks": [
+              1,
+              128,
+              128
+            ]
+          }
+        ],
+        "output_files": 9160,
+        "output_bytes": 605993,
+        "source_sha256": "70d5f3d7c849fdc24c04e903791adf047ec95f590246b7472e33f411ebc19a1a"
+      }
+    ]
+  },
+  "summary": {
+    "before": {
+      "min_seconds": 368.227346700005,
+      "median_seconds": 379.45945980000397,
+      "max_seconds": 390.69157290000294,
+      "iterations": 2,
+      "output_bytes": 3263347,
+      "output_files": 9160
+    },
+    "after": {
+      "min_seconds": 27.89424229999713,
+      "median_seconds": 27.94421114999568,
+      "max_seconds": 27.99417999999423,
+      "iterations": 2,
+      "output_bytes": 605993,
+      "output_files": 9160
+    }
+  },
+  "median_speedup": 13.579179521768774,
+  "serialized_bytes_ratio": 5.385123260499709,
+  "physical_disk_allocation_measured": false,
+  "parity": {
+    "all_six_label_planes_equal": true,
+    "annotated_plane_pixels_compared": 2208765881,
+    "other_planes_zero_fill": true,
+    "evidence": "parity.json",
+    "final_runs_byte_identical_to_complete_plane_comparison_outputs": true
+  },
+  "focused_tests": {
+    "passed": 42,
+    "new_layout_cases": 10,
+    "legacy_layout_case": 1,
+    "existing_preprocessing_and_png_memory_cases": 31
+  },
+  "methodology": "Alternating fresh Python processes and fresh outputs; local warm source, cProfile around convert_image only. Original converter extracted from upstream with its original 65-plane constant. Later two pairs measured final implementation; first exploratory pair excluded. Imports, staging, output inventory, hash comparisons and cleanup excluded. One full mask and one Windows CPU; no full composite or Linux/macOS test. Serialized file bytes are logical lengths, not filesystem allocation.",
+  "output_trees": {
+    "before-1": {
+      "sha256": "c74ea2c3a5adf1d65ea687afec920f53e7282d810f6a1a8700c2e4504cdbfe8f",
+      "files": 9160
+    },
+    "before-2": {
+      "sha256": "c74ea2c3a5adf1d65ea687afec920f53e7282d810f6a1a8700c2e4504cdbfe8f",
+      "files": 9160
+    },
+    "before-3": {
+      "sha256": "c74ea2c3a5adf1d65ea687afec920f53e7282d810f6a1a8700c2e4504cdbfe8f",
+      "files": 9160
+    },
+    "after-1": {
+      "sha256": "b13ed90d98416f6f1c20b7799c5af6c7e3452ca765e12e2e29cce880735a04d2",
+      "files": 9160
+    },
+    "after-2": {
+      "sha256": "b13ed90d98416f6f1c20b7799c5af6c7e3452ca765e12e2e29cce880735a04d2",
+      "files": 9160
+    },
+    "after-3": {
+      "sha256": "b13ed90d98416f6f1c20b7799c5af6c7e3452ca765e12e2e29cce880735a04d2",
+      "files": 9160
+    }
+  },
+  "full_ink_suite": {
+    "passed": 436,
+    "skipped": 9,
+    "failed": 1,
+    "failure": "test_shipped_configs.py::test_manifest_matches_training_sources_without_duplicate_representations",
+    "baseline_failure_reproduced": true,
+    "cause": "Windows backslashes compared with the POSIX paths intentionally stored in shipped JSON; independently addressed by PR2577.",
+    "environment": "PYTHONUTF8=1 inherited by subprocesses; initial mixed-encoding CLI-help failure also reproduced on upstream and removed by the consistent UTF8 environment."
+  },
+  "public_reproduction_and_local_verifier": {
+    "passed": true,
+    "fresh_full_conversion": true,
+    "all_six_plane_hashes_match": true,
+    "focused_tests_passed": 42
+  }
+}

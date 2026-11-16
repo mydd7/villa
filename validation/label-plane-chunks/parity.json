@@ -1,0 +1,146 @@
+[
+  {
+    "level": 0,
+    "shape": [
+      65,
+      32249,
+      51380
+    ],
+    "before_chunks": [
+      65,
+      128,
+      128
+    ],
+    "after_chunks": [
+      1,
+      128,
+      128
+    ],
+    "plane_sha256": "83616522836e46c327b0bb71c6bebf01b3dcaafe94d89b03380c20bc4be2c12a",
+    "same_plane_sha256": true,
+    "occupied_pixels": 95935984,
+    "stored_chunks": 6522,
+    "only_z32_chunks_stored": true,
+    "dtype": "uint8"
+  },
+  {
+    "level": 1,
+    "shape": [
+      65,
+      16125,
+      25690
+    ],
+    "before_chunks": [
+      65,
+      128,
+      128
+    ],
+    "after_chunks": [
+      1,
+      128,
+      128
+    ],
+    "plane_sha256": "ee5d7af330111fa0f6fb5fac8bb78931de67e797247fffad09d7f8effa0c8ae7",
+    "same_plane_sha256": true,
+    "occupied_pixels": 23983996,
+    "stored_chunks": 1811,
+    "only_z32_chunks_stored": true,
+    "dtype": "uint8"
+  },
+  {
+    "level": 2,
+    "shape": [
+      65,
+      8063,
+      12845
+    ],
+    "before_chunks": [
+      65,
+      128,
+      128
+    ],
+    "after_chunks": [
+      1,
+      128,
+      128
+    ],
+    "plane_sha256": "5992d185949ce3433204a774bb1bc2e219ec9dc74039000b602e555f27b95060",
+    "same_plane_sha256": true,
+    "occupied_pixels": 5995999,
+    "stored_chunks": 541,
+    "only_z32_chunks_stored": true,
+    "dtype": "uint8"
+  },
+  {
+    "level": 3,
+    "shape": [
+      65,
+      4032,
+      6423
+    ],
+    "before_chunks": [
+      65,
+      128,
+      128
+    ],
+    "after_chunks": [
+      1,
+      128,
+      128
+    ],
+    "plane_sha256": "4895852b0552accc84858c91cc39266c83b98f3b4b198a49ebf1362fdf0f5a2a",
+    "same_plane_sha256": true,
+    "occupied_pixels": 1499018,
+    "stored_chunks": 176,
+    "only_z32_chunks_stored": true,
+    "dtype": "uint8"
+  },
+  {
+    "level": 4,
+    "shape": [
+      65,
+      2016,
+      3212
+    ],
+    "before_chunks": [
+      65,
+      128,
+      128
+    ],
+    "after_chunks": [
+      1,
+      128,
+      128
+    ],
+    "plane_sha256": "ccbacb8dacab687a0f1dda80362ac908a36994f5d3546b89d923d73e2064e098",
+    "same_plane_sha256": true,
+    "occupied_pixels": 374784,
+    "stored_chunks": 68,
+    "only_z32_chunks_stored": true,
+    "dtype": "uint8"
+  },
+  {
+    "level": 5,
+    "shape": [
+      65,
+      1008,
+      1606
+    ],
+    "before_chunks": [
+      65,
+      128,
+      128
+    ],
+    "after_chunks": [
+      1,
+      128,
+      128
+    ],
+    "plane_sha256": "d9bf1592eec8856ad632f303b2fa9f51806542d935e6b455d06aefefeeada357",
+    "same_plane_sha256": true,
+    "occupied_pixels": 93670,
+    "stored_chunks": 28,
+    "only_z32_chunks_stored": true,
+    "dtype": "uint8"
+  }
+]

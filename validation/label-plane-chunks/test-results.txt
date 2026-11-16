@@ -1,0 +1,12 @@
+Focused suite:42 passed. New layout cases:10. Old layout compatibility:1.
+Existing preprocessing/PNG allocation cases:31.
+Full ink suite with inherited UTF8:436 passed,9 skipped,1 failed.
+The failure is the unchanged Windows/POSIX JSON path assertion in
+ test_shipped_configs.py::test_manifest_matches_training_sources_without_duplicate_representations.
+It is reproduced on upstream e413746 and is covered by the separate PR2577.
+An initial CLI help subprocess encoding failure also reproduces upstream;
+inheriting PYTHONUTF8=1 fixes that environment mismatch.
+No code/test changes for either unrelated Windows condition are included.
+Full output comparison:all six complete Z32 planes equal (2208765881pixels).
+All three generated outputs of each physical layout are byte-identical,
+linking the final source runs to the compared pair.
